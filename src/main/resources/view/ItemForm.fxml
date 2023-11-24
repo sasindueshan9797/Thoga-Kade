@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+   <children>
+      <JFXTextField fx:id="txtItemCode" layoutX="42.0" layoutY="100.0" prefHeight="25.0" prefWidth="101.0" promptText="code here..." />
+      <JFXTextField fx:id="txtItemDescription" layoutX="166.0" layoutY="100.0" promptText="item name here..." />
+      <Label layoutX="42.0" layoutY="67.0" text="Item Code">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="67.0" text="Description">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUnitPrice" layoutX="331.0" layoutY="100.0" promptText="unit price here..." />
+      <Label layoutX="338.0" layoutY="70.0" text="Unit Price">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQty" layoutX="494.0" layoutY="100.0" prefHeight="25.0" prefWidth="107.0" promptText="qty on hand here..." />
+      <Label layoutX="494.0" layoutY="70.0" text="QTY">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="465.0" layoutY="154.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #ffbe76; -fx-background-radius: 10;" text="Update" textAlignment="CENTER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="548.0" layoutY="154.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #2ed573; -fx-background-radius: 10;" text="Save" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTreeTableView fx:id="tblItem" layoutX="32.0" layoutY="199.0" prefHeight="278.0" prefWidth="598.0">
+         <columns>
+            <TreeTableColumn fx:id="colCode" prefWidth="84.0" text="Item Code" />
+            <TreeTableColumn fx:id="colDesc" minWidth="2.0" prefWidth="202.0" text="Description" />
+            <TreeTableColumn fx:id="colUnitPrice" prefWidth="118.0" text="Unit Price" />
+            <TreeTableColumn fx:id="colQty" prefWidth="103.0" text="QTY on Hand" />
+            <TreeTableColumn fx:id="colOption" prefWidth="90.0" text="Option" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXButton buttonType="RAISED" layoutX="574.0" layoutY="484.0" onAction="#btnReloadOnAction" style="-fx-background-color: #70a1ff; -fx-background-radius: 10;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" layoutX="32.0" layoutY="154.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="188.0" promptText="Search Here from Code..." />
+      <JFXButton buttonType="RAISED" layoutX="1.0" onAction="#btnBackOnAction" prefHeight="38.0" prefWidth="44.0" style="-fx-background-radius: 100;" text=" ">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-back-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
