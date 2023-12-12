@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="dashboardPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0984e3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+<AnchorPane fx:id="dashboardPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0984e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
    <children>
       <Label layoutX="181.0" layoutY="14.0" text="Thoga Kade" textFill="WHITE">
          <font>
             <Font name="Lucida Bright Demibold" size="40.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="147.0" onAction="#btnCustomerOnAction" prefHeight="106.0" prefWidth="133.0" style="-fx-background-color: #e58e26;" text="Customers" textFill="#f5f5f5">
+      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="147.0" onAction="#btnCustomerOnAction" prefHeight="106.0" prefWidth="133.0" style="-fx-background-color: #e58e26;" text="Customers" textFill="#f5f5f5">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -21,7 +21,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="158.0" layoutY="147.0" onAction="#btnItemOnAction" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #38ada9;" text="Items" textFill="#f5f5f5">
+      <JFXButton buttonType="RAISED" layoutX="173.0" layoutY="147.0" onAction="#btnItemOnAction" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #38ada9;" text="Items" textFill="#f5f5f5">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -29,7 +29,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="293.0" layoutY="147.0" onAction="#btnOrderOnAction" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #70a1ff;" text="Orders" textFill="#f5f5f5">
+      <JFXButton buttonType="RAISED" layoutX="318.0" layoutY="147.0" onAction="#btnOrderOnAction" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #70a1ff;" text="Place Order" textAlignment="CENTER" textFill="#f5f5f5" wrapText="true">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -37,7 +37,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="432.0" layoutY="147.0" onAction="#btnOrderDetailOnAction" prefHeight="106.0" prefWidth="154.0" style="-fx-background-color: #ff6b81;" text="Order Details" textFill="#f5f5f5">
+      <JFXButton buttonType="RAISED" layoutX="455.0" layoutY="147.0" onAction="#btnOrderDetailOnAction" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #ff6b6b;" text="Order Details" textAlignment="CENTER" textFill="#f5f5f5" wrapText="true">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

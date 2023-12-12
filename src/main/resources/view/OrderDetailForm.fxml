@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.OrderDetailFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="530.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailFormController">
+   <children>
+      <JFXTreeTableView fx:id="tblOrderDetail" layoutX="14.0" layoutY="148.0" prefHeight="304.0" prefWidth="673.0">
+         <columns>
+            <TreeTableColumn fx:id="colOrderId" prefWidth="76.0" text="Order ID" />
+            <TreeTableColumn fx:id="colItemCode" minWidth="2.0" prefWidth="92.0" text="Item Code" />
+            <TreeTableColumn fx:id="colCustId" prefWidth="124.0" text="Customer ID" />
+            <TreeTableColumn fx:id="colUnitPrice" prefWidth="96.0" text="Unit Price" />
+            <TreeTableColumn fx:id="colQty" prefWidth="89.0" text="Buying Qty" />
+            <TreeTableColumn fx:id="colTotal" prefWidth="98.0" text="Total" />
+            <TreeTableColumn fx:id="colOption" prefWidth="98.0" text="Option" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXButton buttonType="RAISED" layoutX="618.0" layoutY="484.0" onAction="#btnReloadOnAction" style="-fx-background-color: #70a1ff; -fx-background-radius: 10;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="245.0" promptText="Search Here from Order ID or Customer ID..." />
+      <JFXButton buttonType="RAISED" onAction="#btnBackOnAction" prefHeight="38.0" prefWidth="44.0" style="-fx-background-radius: 100;" text=" ">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-back-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtItemDetails" layoutX="55.0" layoutY="35.0" prefHeight="25.0" prefWidth="230.0" promptText="click item on table to view Item description" />
+      <JFXTextField fx:id="txtCustomerDetails" layoutX="307.0" layoutY="35.0" prefHeight="25.0" prefWidth="245.0" promptText="click item on table to view Customer Details" />
+   </children>
 </AnchorPane>

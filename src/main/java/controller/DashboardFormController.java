@@ -38,8 +38,26 @@ public class DashboardFormController {
     }
 
     public void btnOrderOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/PlaceOrderForm.fxml"))));
+            stage.setResizable(false);
+            stage.setTitle("Place Order");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void btnOrderDetailOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/OrderDetailForm.fxml"))));
+            stage.setResizable(false);
+            stage.setTitle("Order Details");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -2,6 +2,8 @@ package model.Impl;
 
 import db.DBConnection;
 import dto.CustomerDto;
+import dto.ItemDto;
+import dto.OrderDto;
 import model.CustomerModel;
 
 import java.sql.PreparedStatement;
@@ -46,6 +48,24 @@ public class CustomerModelImpl implements CustomerModel {
     }
 
     @Override
+    public CustomerDto lastCustomer() throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM customer ORDER BY id DESC LIMIT 1";
+        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()){
+            return new CustomerDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getDouble(4)
+            );
+        }
+
+        return null;
+    }
+
+    @Override
     public List<CustomerDto> allCustomers() throws SQLException, ClassNotFoundException {
         List<CustomerDto> list = new ArrayList<>();
 
@@ -64,7 +84,21 @@ public class CustomerModelImpl implements CustomerModel {
     }
 
     @Override
-    public CustomerDto searchCustomer(String id) {
+    public CustomerDto getCustomer(String id) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM customer WHERE id=?";
+        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setString(1,id);
+        ResultSet resultSet = pstm.executeQuery();
+        if (resultSet.next()){
+            return new CustomerDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getDouble(4)
+            );
+        }
         return null;
     }
+
+
 }

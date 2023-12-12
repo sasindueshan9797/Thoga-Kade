@@ -70,7 +70,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="txtSearch" layoutX="23.0" layoutY="144.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="188.0" promptText="Search Here from ID..." />
+      <JFXTextField fx:id="txtSearch" layoutX="23.0" layoutY="144.0" prefHeight="25.0" prefWidth="188.0" promptText="Search Here from ID..." />
       <JFXButton buttonType="RAISED" layoutX="2.0" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="31.0" style="-fx-background-radius: 100;" text=" ">
          <graphic>
             <ImageView fitHeight="39.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
